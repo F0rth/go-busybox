@@ -57,5 +57,5 @@ import "C"
 import "fmt"
 
 func busybox_applet(command string) (string) {
-	return message := C.GoString(C.bb_applet(C.CString(command)))
+	return C.GoString(C.bb_applet(C.CString(command)))
 }
