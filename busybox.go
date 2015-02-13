@@ -54,8 +54,7 @@ char* bb_applet(char* applet){
 }
 */
 import "C"
-import "fmt"
 
-func busybox_applet(command string) (string) {
+func Applet(command string) (string) {
 	return C.GoString(C.bb_applet(C.CString(command)))
 }
