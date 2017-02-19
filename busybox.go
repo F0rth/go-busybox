@@ -1,12 +1,15 @@
 package busybox
 
 /*
-#cgo CFLAGS: -Iinclude -Ilibbb
+#cgo CFLAGS: -Iinclude
 #cgo LDFLAGS: -L0_lib -lbusybox
-#include <autoconf.h>
-#include <busybox.h>
+
+#include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
+
+extern int lbb_main(char **argv);
 
 char* bb_applet(char* applet){
 	int fd;
